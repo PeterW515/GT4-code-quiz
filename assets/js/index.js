@@ -40,8 +40,8 @@ function setTime() {
         timeRemaining--;
         timer.innerText = timeRemaining;
         if(timeRemaining===0){
-            alert('done');
             clearInterval(timerInterval);
+            initialsPrompt();
         }
     },1000)
     gameTimer = timerInterval;
@@ -223,7 +223,7 @@ function viewHighscores() {
     if(scoreArray!==null){
         for(let i=0;i<scoreArray.length;i++){
             let scoreDiv = document.createElement('div');
-            scoreDiv.setAttribute('style','width:50%; text-align:left; background-color:darkorchid; margin:3px; padding: 2px');
+            scoreDiv.setAttribute('style','width:50%; text-align:left; background-color:mediumorchid; margin:3px; padding: 2px');
             scoreDiv.innerText = (i+1) + '. ' + scoreArray[i].userInitials + ' - ' + scoreArray[i].score;
             midSec.appendChild(scoreDiv);
         }
