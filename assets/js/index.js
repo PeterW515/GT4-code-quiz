@@ -96,9 +96,9 @@ function checkAnswer(e) {
     //check if answer is correct
     let correct = (qAndA[currentQuestion][ansNum] === answers[currentQuestion]);
     displayResult(correct);
-    //if incorrect, remove 15 seconds
+    //if incorrect, remove 10 seconds
     if (!correct) {
-        timeRemaining -= 15;
+        timeRemaining -= 10;
         //if time less than zero, end game by setting currentQuestion equal to last question
         if (timeRemaining < 0) {
             currentQuestion = qAndA.length - 1;
